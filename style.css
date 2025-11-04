@@ -1,0 +1,217 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    /* Use flex-direction: column to stack the two apps vertically in the center */
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px 0; /* Add some margin around the body */
+    background-color: #e6e9ee; /* Very light, cool background */
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px 0; /* Space between the two containers */
+}
+
+/* Specific styling for the new companion timer */
+.companion-timer {
+    background-color: #f7f9fc; /* Slightly lighter background to differentiate it */
+    border: 1px solid #dcdfe6;
+}
+
+h1 {
+    color: #004080; /* Deep blue heading */
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+h2 {
+    color: #3d5a80; /* Secondary heading color */
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #e0e5ea;
+    padding-bottom: 5px;
+}
+
+/* --- Display Area --- */
+.display {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.display p {
+    font-weight: 600; /* Slightly bolder labels */
+    margin: 10px 0 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Current Rep Duration */
+#rep-duration {
+    font-size: 3.2em;
+    font-weight: 900;
+    color: #007bff; /* Primary Blue for progressive rep */
+}
+
+/* Starting Duration Control Group */
+.duration-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.duration-buttons div {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0 15px;
+    min-width: 30px;
+    color: #38a169; /* Green tone for starting value */
+}
+
+/* Real-time Countdown Timer (Main App) */
+#countdown-timer {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #dc3545; /* Red for active countdown */
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* Companion Tracker Display Overrides */
+#play-time-display {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #007bff; /* Blue for play time count up */
+}
+#rest-time-display {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #ffc107; /* Amber/Yellow for rest time countdown */
+    margin-bottom: 15px;
+}
+
+
+#status-message, #tracker-status {
+    font-size: 1em;
+    color: #555;
+    margin-top: 15px;
+    min-height: 20px; 
+}
+
+/* --- Increment Control Area --- */
+.increment-control {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ced4da; /* Solid border for clarity */
+    border-radius: 8px;
+    background-color: #f0f0f5;
+}
+
+.increment-control p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+.increment-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.increment-buttons button, .duration-buttons button {
+    background-color: #e9ecef;
+    color: #333;
+    border: 1px solid #ced4da;
+    padding: 8px 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.increment-buttons button:hover:not(:disabled), 
+.duration-buttons button:hover:not(:disabled) {
+    background-color: #dee2e6;
+}
+
+#increment-duration {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 15px;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* --- Control Buttons (Start/Stop/Reset) --- */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between buttons */
+}
+
+.controls button {
+    padding: 12px 10px;
+    font-size: 0.95em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    flex-grow: 1;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+/* Endurance App Buttons */
+#start-button {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#stop-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+#reset-button {
+    background-color: #6c757d; /* Gray for reset */
+    color: white;
+}
+
+/* Companion Tracker Buttons */
+#tracker-start-button {
+    background-color: #17a2b8; /* Cyan/Teal for start play */
+    color: white;
+}
+
+#tracker-stop-button {
+    background-color: #ff6347; /* Tomato Red for stop play */
+    color: white;
+}
+
+#tracker-reset-button {
+    background-color: #343a40; /* Dark gray for tracker reset */
+    color: white;
+}
+
+/* Hover States */
+.controls button:hover:not(:disabled) {
+    opacity: 0.85;
+}
+
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

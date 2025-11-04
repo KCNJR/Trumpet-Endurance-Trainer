@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trumpet Endurance Trainer v2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container main-app">
+        <h1>Progressive Endurance Trainer</h1>
+        
+        <div class="display">
+            <p>Starting Duration (seconds):</p>
+            <div class="duration-buttons">
+                <button id="decrement-start-button">-</button>
+                <div id="start-duration">5</div>
+                <button id="increment-start-button">+</button>
+            </div>
+            
+            <p>Current Rep Duration (seconds):</p>
+            <div id="rep-duration">5</div>
+            
+            <div id="countdown-timer">00:00</div> 
+            
+            <p id="status-message">Press START to begin.</p>
+        </div>
+
+        <div class="increment-control">
+            <p>Increment Duration (seconds):</p>
+            <div class="increment-buttons">
+                <button id="decrement-increment-button">-</button>
+                <div id="increment-duration">1</div>
+                <button id="increment-increment-button">+</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="start-button">START</button>
+            <button id="stop-button" disabled>STOP</button>
+            <button id="reset-button" disabled>RESET</button>
+        </div>
+    </div>
+    <hr style="width: 50%; margin: 30px auto; border-color: #ccc;">
+
+    <div class="container companion-timer">
+        <h2>Rest-as-You-Play Tracker</h2>
+        
+        <div class="display">
+            <p>Playing Time (Forward Count):</p>
+            <div id="play-time-display">00:00</div>
+            
+            <p>Resting Time (Countdown):</p>
+            <div id="rest-time-display">00:00</div>
+            
+            <p id="tracker-status">Press START Play to begin tracking.</p>
+        </div>
+
+        <div class="controls">
+            <button id="tracker-start-button">START Play</button>
+            <button id="tracker-stop-button" disabled>STOP Play & START Rest</button>
+            <button id="tracker-reset-button" disabled>RESET Tracker</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
